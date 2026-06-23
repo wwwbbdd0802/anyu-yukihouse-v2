@@ -176,7 +176,7 @@ function BottomNav({setPage,active}){
             <span style={{fontSize:11,fontWeight:on?700:400}}>{it.lb}</span>
           </>
         );
-        const st={flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:4,background:"none",border:"none",cursor:"pointer",color:on?G:"#666",textDecoration:"none",padding:"4px 0"};
+        const st={flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:4,gap:4,}as const;background:"none",border:"none",cursor:"pointer",color:on?G:"#666",textDecoration:"none",padding:"4px 0"};
         return it.href
           ? <a key={it.id} href={it.href} style={st}>{inner}</a>
           : <button key={it.id} style={st} onClick={()=>setPage(it.id)}>{inner}</button>;
