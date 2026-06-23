@@ -166,8 +166,7 @@ function BottomNav({setPage,active}){
     {id:"line",ic:"◯",lb:"LINE",href:LINE},
     {id:"lead",ic:"?",lb:"諮詢"},
   ];
-  return(
-    <nav style={{position:"sticky",bottom:0,zIndex:100,backgroundColor:"rgba(10,10,10,.96)",backdropFilter:"blur(12px)",borderTop:`1px solid ${BD}`,display:"flex",padding:"8px 0 calc(8px + env(safe-area-inset-bottom))"}}>
+  return ( <nav style={{position:"sticky",bottom:0,zIndex:100,backgroundColor:"rgba(10,10,10,.96)",backdropFilter:"blur(12px)",borderTop:`1px solid ${BD}`,display:"flex",padding:"8px 0 calc(8px + env(safe-area-inset-bottom))"}}>
       {items.map(it=>{
         const on=active===it.id;
         const inner=(
